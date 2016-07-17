@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+target :'GHZSwiftB' do
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'AFNetworking'
+pod 'SVProgressHUD'
+pod 'Masonry'
+end
