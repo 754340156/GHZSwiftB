@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D67E2C821D3D1BF100F9CC73 /* GHZCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */; };
+		D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */; };
+		D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */; };
+		D68D18161D3CFCF100FD1B53 /* GHZHomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D18151D3CFCF100FD1B53 /* GHZHomeWebViewController.swift */; };
 		D69494AE1D3BAF1D007B6FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69494AD1D3BAF1D007B6FBD /* AppDelegate.swift */; };
 		D69494B31D3BAF1D007B6FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69494B11D3BAF1D007B6FBD /* Main.storyboard */; };
 		D69494B51D3BAF1E007B6FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69494B41D3BAF1E007B6FBD /* Assets.xcassets */; };
@@ -39,6 +43,12 @@
 		D6A452551D3BB925008B4B3C /* GHZShopCarRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452541D3BB925008B4B3C /* GHZShopCarRedDotView.swift */; };
 		D6A452571D3BBA34008B4B3C /* GHZTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452561D3BBA34008B4B3C /* GHZTabBarViewController.swift */; };
 		D6A452591D3BBADC008B4B3C /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452581D3BBADC008B4B3C /* AnimationTabBarController.swift */; };
+		D6E29ADB1D3D0D3000A15AF7 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */; };
+		D6E29AE11D3D0FC600A15AF7 /* GHZHomeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */; };
+		D6E29AE21D3D0FC600A15AF7 /* GHZHomeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E29ADF1D3D0FC600A15AF7 /* GHZHomeFooterView.xib */; };
+		D6E29AE31D3D0FC600A15AF7 /* GHZHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */; };
+		D6E29AE61D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29AE41D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift */; };
+		D6E29AE71D3D101F00A15AF7 /* GHZHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6E29AE51D3D101F00A15AF7 /* GHZHomeCollectionViewCell.xib */; };
 		D6EA9FD21D3BBEA8005A1093 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6EA9FB81D3BBEA8005A1093 /* UMSocialLocalizable.strings */; };
 		D6EA9FD31D3BBEA8005A1093 /* libUMSocial_Sdk_5.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EA9FC61D3BBEA8005A1093 /* libUMSocial_Sdk_5.2.1.a */; };
 		D6EA9FD41D3BBEA8005A1093 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EA9FC81D3BBEA8005A1093 /* UMSCommentDetailController.xib */; };
@@ -66,6 +76,10 @@
 		388B0350FFA0DE6B061E2F32 /* Pods_GHZSwiftB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHZSwiftB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A067F511DF8BE10D385DB83 /* Pods-GHZSwiftB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZSwiftB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHZSwiftB/Pods-GHZSwiftB.debug.xcconfig"; sourceTree = "<group>"; };
 		C8A48957AF03767A6910746D /* Pods-GHZSwiftB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZSwiftB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZSwiftB/Pods-GHZSwiftB.release.xcconfig"; sourceTree = "<group>"; };
+		D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCycleScrollView.swift; sourceTree = "<group>"; };
+		D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHeaderData.swift; sourceTree = "<group>"; };
+		D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZ_Extension.swift; sourceTree = "<group>"; };
+		D68D18151D3CFCF100FD1B53 /* GHZHomeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeWebViewController.swift; sourceTree = "<group>"; };
 		D69494AA1D3BAF1D007B6FBD /* GHZSwiftB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZSwiftB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69494AD1D3BAF1D007B6FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69494B21D3BAF1D007B6FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +115,12 @@
 		D6A452541D3BB925008B4B3C /* GHZShopCarRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZShopCarRedDotView.swift; sourceTree = "<group>"; };
 		D6A452561D3BBA34008B4B3C /* GHZTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZTabBarViewController.swift; sourceTree = "<group>"; };
 		D6A452581D3BBADC008B4B3C /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
+		D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "../../../Library/Developer/Xcode/DerivedData/GHZSwiftB-cihgwxysypndnyghzssizlzhbwuv/Build/Products/Debug-iphonesimulator/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
+		D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeFooterView.swift; sourceTree = "<group>"; };
+		D6E29ADF1D3D0FC600A15AF7 /* GHZHomeFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZHomeFooterView.xib; sourceTree = "<group>"; };
+		D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHeaderView.swift; sourceTree = "<group>"; };
+		D6E29AE41D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6E29AE51D3D101F00A15AF7 /* GHZHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHZHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6EA9FB91D3BBEA8005A1093 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		D6EA9FBB1D3BBEA8005A1093 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		D6EA9FBC1D3BBEA8005A1093 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -157,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E29ADB1D3D0D3000A15AF7 /* SVProgressHUD.framework in Frameworks */,
 				D6EA9FFE1D3BBEBA005A1093 /* libSocialQQ.a in Frameworks */,
 				D6EA9FFF1D3BBEBA005A1093 /* TencentOpenAPI.framework in Frameworks */,
 				D6EAA0021D3BBEBA005A1093 /* libWeChatSDK.a in Frameworks */,
@@ -183,6 +204,7 @@
 		9599E06B86E87F10233937EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */,
 				388B0350FFA0DE6B061E2F32 /* Pods_GHZSwiftB.framework */,
 			);
 			name = Frameworks;
@@ -268,6 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				D6A452471D3BB498008B4B3C /* GHZHomePageController.swift */,
+				D68D18151D3CFCF100FD1B53 /* GHZHomeWebViewController.swift */,
+				D6E29ADC1D3D0FC600A15AF7 /* Model */,
+				D6E29ADD1D3D0FC600A15AF7 /* View */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -341,8 +366,30 @@
 			children = (
 				D6A452541D3BB925008B4B3C /* GHZShopCarRedDotView.swift */,
 				D6A452581D3BBADC008B4B3C /* AnimationTabBarController.swift */,
+				D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */,
+				D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D6E29ADC1D3D0FC600A15AF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6E29ADD1D3D0FC600A15AF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */,
+				D6E29ADF1D3D0FC600A15AF7 /* GHZHomeFooterView.xib */,
+				D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */,
+				D6E29AE41D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift */,
+				D6E29AE51D3D101F00A15AF7 /* GHZHomeCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D6EA9FB71D3BBEA8005A1093 /* UMSocial_Sdk_5.2.1 */ = {
@@ -482,6 +529,8 @@
 				TargetAttributes = {
 					D69494A91D3BAF1D007B6FBD = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -524,6 +573,7 @@
 				D69494E51D3BAF71007B6FBD /* SearchProduct in Resources */,
 				D6EAA0031D3BBEBA005A1093 /* README.txt in Resources */,
 				D69494DF1D3BAF71007B6FBD /* Mine in Resources */,
+				D6E29AE71D3D101F00A15AF7 /* GHZHomeCollectionViewCell.xib in Resources */,
 				D6EA9FDA1D3BBEA8005A1093 /* UMSnsAccountViewController.xib in Resources */,
 				D6EA9FD61D3BBEA8005A1093 /* UMSCommentInputControlleriPad.xib in Resources */,
 				D6EAA0001D3BBEBA005A1093 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
@@ -539,6 +589,7 @@
 				D6EA9FDC1D3BBEA8005A1093 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				D69494DC1D3BAF71007B6FBD /* AD in Resources */,
 				D6EA9FD91D3BBEA8005A1093 /* UMSLoginViewController.xib in Resources */,
+				D6E29AE21D3D0FC600A15AF7 /* GHZHomeFooterView.xib in Resources */,
 				D69494E81D3BAF71007B6FBD /* UserMessage in Resources */,
 				D6EA9FD21D3BBEA8005A1093 /* UMSocialLocalizable.strings in Resources */,
 				D6EA9FD71D3BBEA8005A1093 /* UMShareEditViewController.xib in Resources */,
@@ -600,15 +651,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67E2C821D3D1BF100F9CC73 /* GHZCycleScrollView.swift in Sources */,
+				D6E29AE11D3D0FC600A15AF7 /* GHZHomeFooterView.swift in Sources */,
+				D68D18161D3CFCF100FD1B53 /* GHZHomeWebViewController.swift in Sources */,
 				D6A452401D3BB0F4008B4B3C /* GHZBaseViewController.swift in Sources */,
+				D6E29AE61D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift in Sources */,
 				D6A452481D3BB498008B4B3C /* GHZHomePageController.swift in Sources */,
 				D6A452421D3BB18E008B4B3C /* GHZNavViewController.swift in Sources */,
+				D6E29AE31D3D0FC600A15AF7 /* GHZHomeHeaderView.swift in Sources */,
 				D6A452591D3BBADC008B4B3C /* AnimationTabBarController.swift in Sources */,
 				D6A452461D3BB30B008B4B3C /* Public.swift in Sources */,
 				D6A4524E1D3BB4C9008B4B3C /* GHZSuperMarketController.swift in Sources */,
 				D69494AE1D3BAF1D007B6FBD /* AppDelegate.swift in Sources */,
 				D6A4524A1D3BB4A7008B4B3C /* GHZMeController.swift in Sources */,
+				D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */,
 				D6A452571D3BBA34008B4B3C /* GHZTabBarViewController.swift in Sources */,
+				D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */,
 				D6A452531D3BB8E0008B4B3C /* UIView+Extension.swift in Sources */,
 				D6A452551D3BB925008B4B3C /* GHZShopCarRedDotView.swift in Sources */,
 				D6A4524C1D3BB4B6008B4B3C /* GHZShopCartController.swift in Sources */,
@@ -754,6 +812,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GHZSwiftB/GHZSwiftB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -782,6 +841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZSwiftB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GHZSwiftB/GHZSwiftB-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

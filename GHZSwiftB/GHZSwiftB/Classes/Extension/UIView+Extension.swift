@@ -31,4 +31,10 @@ extension UIView {
     var point: CGPoint {
         return self.frame.origin
     }
+    
+    
+    func GHZ_CreateViewWithXib()->UIView
+    {
+        return Bundle.main().loadNibNamed(NSStringFromClass(self.classForCoder), owner: nil, options: nil).first as! UIView
+    }
 }

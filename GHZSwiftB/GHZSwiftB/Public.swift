@@ -7,9 +7,14 @@
 //
 
 import UIKit
-
-public let GHZScreenBounds: CGRect = UIScreen.mainScreen().bounds
-public let GHZScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
-public let GHZScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
+//基本属性
+public let GHZScreenBounds: CGRect = UIScreen.main().bounds
+public let GHZScreenWidth: CGFloat = UIScreen.main().bounds.size.width
+public let GHZScreenHeight: CGFloat = UIScreen.main().bounds.size.height
 public let GHZNavigationHeight: CGFloat = 64
-public let ShopCarRedDotAnimationDuration: NSTimeInterval = 0.2
+public let ShopCarRedDotAnimationDuration: TimeInterval = 0.2
+
+
+
+
+

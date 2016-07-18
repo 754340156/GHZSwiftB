@@ -19,8 +19,8 @@ class GHZTabBarViewController: AnimationTabBarController, UITabBarControllerDele
             adImageView!.image = adImage!
             self.view.addSubview(adImageView!)
             
-            UIImageView.animateWithDuration(2.0, animations: { () -> Void in
-                tmpSelf!.adImageView!.transform = CGAffineTransformMakeScale(1.2, 1.2)
+            UIImageView.animate(withDuration: 2.0, animations: { () -> Void in
+                tmpSelf!.adImageView!.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                 tmpSelf!.adImageView!.alpha = 0
                 }) { (finsch) -> Void in
                     tmpSelf!.adImageView!.removeFromSuperview()
@@ -36,7 +36,7 @@ class GHZTabBarViewController: AnimationTabBarController, UITabBarControllerDele
         buildMainTabBarChildViewController()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if fristLoadMainTabBarController {
@@ -56,7 +56,7 @@ class GHZTabBarViewController: AnimationTabBarController, UITabBarControllerDele
         tabBarControllerAddChildViewController(GHZMeController(), title: "我的", imageName: "v2_my", selectedImageName: "v2_my_r", tag: 3)
     }
     
-    private func tabBarControllerAddChildViewController(childView: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
+    private func tabBarControllerAddChildViewController(_ childView: UIViewController, title: String, imageName: String, selectedImageName: String, tag: Int) {
         let vcItem = RAMAnimatedTabBarItem(title: title, image: UIImage(named: imageName), selectedImage: UIImage(named: selectedImageName))
         vcItem.tag = tag
         vcItem.animation = RAMBounceAnimation()
@@ -66,9 +66,9 @@ class GHZTabBarViewController: AnimationTabBarController, UITabBarControllerDele
         addChildViewController(navigationVC)
     }
     
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let childArr = tabBarController.childViewControllers as NSArray
-        let index = childArr.indexOfObject(viewController)
+        let index = childArr.index(of: viewController)
         
         if index == 2 {
             return false
