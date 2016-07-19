@@ -12,8 +12,5 @@ class GHZHomeWebViewController: GHZBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
- 
-
 }

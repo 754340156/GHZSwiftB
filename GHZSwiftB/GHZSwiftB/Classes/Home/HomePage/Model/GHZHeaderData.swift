@@ -17,7 +17,7 @@ class GHZHeaderData: NSObject {
         let path = Bundle.main().pathForResource("首页焦点按钮", ofType: nil)
         let data = NSData(contentsOfFile: path!)
         if data != nil {
-            let dict: NSDictionary = (try! JSONSerialization.jsonObject(data! as Data, options: .allowFragments)) as! NSDictionary
+             let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.allowFragments)) as! NSDictionary
             let modelTool = GHZ_Extension.sharedManager
             let data = modelTool.objectWithDictionary(dict: dict, cls: GHZHeaderData.self) as? GHZHeaderData
             completion(data: data, error: nil)
@@ -34,9 +34,9 @@ class GHZHeaderData: NSObject {
 
 
 class HeadData: NSObject, GHZ_ExtensionProtocol {
-    var focus: [Activities]?
-    var icons: [Activities]?
-    var activities: [Activities]?
+    var focus: Array<Activities>?
+    var icons: Array<Activities>?
+    var activities: Array<Activities>?
     
     static func customClassMapping() -> [String : String]? {
         return ["focus" : "\(Activities.self)", "icons" : "\(Activities.self)", "activities" : "\(Activities.self)"]

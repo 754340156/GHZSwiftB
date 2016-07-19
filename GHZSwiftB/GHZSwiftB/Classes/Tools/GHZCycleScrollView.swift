@@ -7,44 +7,85 @@
 //
 
 import UIKit
+
 class GHZCycleScrollView: UIView {
-    private var scrollView:UIScrollView
+    private var contentScrollView:UIScrollView
     private var pageControl:UIPageControl
     private var timer:Timer?
     
     private let maxCount = 3
     private var placeholderImage:UIImage
-    var clickImageView:((index:Int)->())?
-    
-    
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setScrollView()
-        setPageControll()
+    private var clickImageView:((index:Int)->())?
+    var headData:GHZHeaderData  {
+        didSet {
+            if timer != nil {
+                timer?.invalidate()
+                timer = nil
+            }
+            if headData.data?.focus?.count >= 0{
+                pageControl.numberOfPages = (headData.data?.focus?.count)!
+                pageControl.currentPage = 0
+                upDateScrollView()
+                startTimer()
+            }
+        }
     }
     
+    
+    override convenience init (frame: CGRect) {
+        self.init(frame: frame)
+        setScrollView()
+        setPageControll()
+        
+    }
+    convenience init(frame: CGRect, placeholder: UIImage, focusImageViewClick:((index: Int) -> Void)) {
+        self.init(frame: frame)
+        placeholderImage = placeholder
+        clickImageView = focusImageViewClick
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        scrollView.frame = bounds
-        scrollView.contentSize = CGSize(width: CGFloat(maxCount) * width, height: 0)
+        contentScrollView.frame = bounds
+        contentScrollView.contentSize = CGSize(width: CGFloat(maxCount) * width, height: 0)
         for i in 0...maxCount - 1 {
-            let imageView = scrollView.subviews[i]
-            imageView.frame = CGRect(x: scrollView.width * CGFloat(i), y: 0, width: scrollView.width, height: scrollView.height)
+            let imageView = contentScrollView.subviews[i]
+            imageView.frame = CGRect(x: contentScrollView.width * CGFloat(i), y: 0, width: contentScrollView.width, height: contentScrollView.height)
             
         }
-        pageControl.frame = CGRect(x: scrollView.width - 80, y: scrollView.height - 20, width: 80, height: 20)
+        pageControl.frame = CGRect(x: contentScrollView.width - 80, y: contentScrollView.height - 20, width: 80, height: 20)
         
         
         upDateScrollView()
     }
     private func upDateScrollView(){
         
+        
+        for i in 0 ..< contentScrollView.subviews.count  {
+            let imageView:UIImageView = contentScrollView.subviews[i] as! UIImageView
+            var index = pageControl.currentPage
+            
+            if i == 0 {
+                index -= 1
+            }else if 2 == index{
+                index += 1
+            }
+            if index < 0 {
+                index = self.pageControl.numberOfPages - 1
+            }else if index >= pageControl.numberOfPages
+            {
+                index = 0
+            }
+            
+            imageView.tag = index
+            if headData.data?.focus?.count > 0 {
+                imageView.sd_setImage(with: URL(string: (headData.data?.focus?[index].img)!), placeholderImage: placeholderImage)
+            }
+            contentScrollView.contentOffset = CGPoint(x: contentScrollView.width, y: 0)
+        }
     }
     
     //开启定时器
@@ -61,7 +102,7 @@ class GHZCycleScrollView: UIView {
     //定时器方法
     private func next()
     {
-        scrollView.setContentOffset(CGPoint(x: 2.0 * scrollView.frame.size.width, y: 0), animated: true)
+        contentScrollView.setContentOffset(CGPoint(x: 2.0 * contentScrollView.frame.size.width, y: 0), animated: true)
     }
     //点击图片回调
     private func clickImageView(tap:UITapGestureRecognizer)
@@ -73,13 +114,13 @@ class GHZCycleScrollView: UIView {
     
     //set or get
     private func setScrollView() {
-        scrollView = UIScrollView()
-        scrollView.showsVerticalScrollIndicator = false
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.isPagingEnabled = true
-        scrollView.delegate = self
-        scrollView.bounces = false
-        addSubview(scrollView)
+        contentScrollView = UIScrollView()
+        contentScrollView.showsVerticalScrollIndicator = false
+        contentScrollView.showsHorizontalScrollIndicator = false
+        contentScrollView.isPagingEnabled = true
+        contentScrollView.delegate = self
+        contentScrollView.bounces = false
+        addSubview(contentScrollView)
         
         
         for _ in 0..<maxCount {
@@ -106,5 +147,38 @@ class GHZCycleScrollView: UIView {
 
 extension GHZCycleScrollView:UIScrollViewDelegate
 {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var count  = 0
+        var minDistance = CGFloat(MAXFLOAT)
+        
+        for i in 0..<contentScrollView.subviews.count {
+            let imageView = contentScrollView.subviews[i]
+            let contentOffSet = abs(imageView.x - contentScrollView.contentOffset.x) as CGFloat
+            
+            if contentOffSet < minDistance
+            {
+                minDistance = contentOffSet
+                count = imageView.tag
+            }
+            pageControl.currentPage = count
+        }
+        
+        
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startTimer()
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        stopTimer()
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        upDateScrollView()
+    }
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        upDateScrollView()
+    }
+    
     
 }
+    
