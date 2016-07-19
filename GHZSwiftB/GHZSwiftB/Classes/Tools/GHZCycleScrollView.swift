@@ -141,7 +141,6 @@ class GHZCycleScrollView: UIView {
         addSubview(pageControl)
         
     }
-  
 }
 
 

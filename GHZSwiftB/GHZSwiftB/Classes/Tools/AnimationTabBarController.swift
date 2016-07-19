@@ -114,7 +114,7 @@ class AnimationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default().addObserver(self, selector: "searchViewControllerDeinit", name: "LFBSearchViewControllerDeinit", object: nil)
+        NotificationCenter.default().addObserver(self, selector: #selector(searchViewControllerDeinit), name: "LFBSearchViewControllerDeinit", object: nil)
     }
     
     deinit {
@@ -158,7 +158,7 @@ class AnimationTabBarController: UITabBarController {
         tabBar.addSubview(viewContainer)
         viewContainer.tag = index
         
-        let tap = UITapGestureRecognizer(target: self, action: "tabBarClick:")
+        let tap = UITapGestureRecognizer(target: self, action: Selector(("tabBarClick:")))
         viewContainer.addGestureRecognizer(tap)
         
         return viewContainer

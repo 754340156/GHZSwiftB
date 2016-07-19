@@ -94,8 +94,24 @@ class GHZAnimationViewController: GHZBaseViewController {
         
         transitionLayer.add(groupAnimation, forKey: "BigShopCarAnimation")
     }
-    
-
+    override func animationDidStop(_ anim : CAAnimation, finished flag : Bool)
+    {
+        if self.animationLayerArray?.count > 0 {
+            let transitionLayer = animationLayerArray![0]
+            transitionLayer.isHidden = true
+            transitionLayer.removeFromSuperlayer()
+            animationLayerArray?.removeFirst()
+            view.layer.removeAnimation(forKey: "cartParabola")
+        }
+        if self.animationBigLayerArray?.count > 0 {
+            let transitionLayer = animationBigLayerArray![0]
+            transitionLayer.isHidden = true
+            transitionLayer.removeFromSuperlayer()
+            animationBigLayerArray?.removeFirst()
+            view.layer.removeAnimation(forKey: "BigShopCarAnimation")
+            
+        }
+    }
     
     
     
