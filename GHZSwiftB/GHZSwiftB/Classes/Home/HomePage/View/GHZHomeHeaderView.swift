@@ -17,7 +17,8 @@ class GHZHomeHeaderView: UIView {
     var headerViewHeight:CGFloat = 0
         {
         willSet{
-            NotificationCenter.default().post(name:  NSNotification.Name(rawValue: HomeHeadViewHeightDidChange), object: newValue)
+            _ = Notification.Name(rawValue: HomeHeadViewHeightDidChange)
+            NotificationCenter.default().post(name: Notification.Name(rawValue: HomeHeadViewHeightDidChange), object: newValue)
             frame = CGRect(x: 0, y: -newValue, width: GHZScreenWidth, height: newValue)
         }
     }

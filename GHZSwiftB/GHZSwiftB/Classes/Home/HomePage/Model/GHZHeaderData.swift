@@ -30,9 +30,6 @@ class GHZHeaderData: NSObject {
 
 }
 
-
-
-
 class HeadData: NSObject, GHZ_ExtensionProtocol {
     var focus: Array<Activities>?
     var icons: Array<Activities>?

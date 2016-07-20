@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 // MRRK: 基本属性
 public let GHZScreenBounds: CGRect = UIScreen.main().bounds
 public let GHZScreenWidth: CGFloat = UIScreen.main().bounds.size.width
@@ -41,12 +42,14 @@ public let ADImageLoadFail: String = "ADImageLoadFail"
 public let GHZShopCartProductNumberDidChange:String = "GHZShopCartProductNumberDidChange"
 //价格发生改变
 public let GHZShopCartProductPriceDidChange:String = "GHZShopCartProductPriceDidChange"
+//购物车移除了
+public let GHZShopCartDidRemoveProduct:String = "GHZShopCartDidRemoveProduct"
+
+public let GHZSearchViewControllerDeinit:String =  "GHZSearchViewControllerDeinit"
 
 
 
-
-
-
+public let GHZSearchViewControllerHistorySearchArray = "GHZSearchViewControllerHistorySearchArray"
 
 
 

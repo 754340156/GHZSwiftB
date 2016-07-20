@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61284C41D3F5672006A7304 /* GHZActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61284C31D3F5672006A7304 /* GHZActionSheet.swift */; };
+		D61284C61D3F5752006A7304 /* GHZYellowShopCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61284C51D3F5752006A7304 /* GHZYellowShopCartView.swift */; };
+		D615FA721D3F636200B058C6 /* GHZRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615FA711D3F636200B058C6 /* GHZRefreshHeader.swift */; };
 		D616CBCE1D3E7DDF005159AE /* GHZProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616CBCD1D3E7DDF005159AE /* GHZProductDetailViewController.swift */; };
+		D62D3BC91D3F1C1100066351 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BC81D3F1C1100066351 /* UIImage+Extension.swift */; };
+		D62D3BCB1D3F1D2600066351 /* GHZUserShopCartTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCA1D3F1D2600066351 /* GHZUserShopCartTools.swift */; };
+		D62D3BCD1D3F1D8A00066351 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCC1D3F1D8A00066351 /* String+Extension.swift */; };
+		D62D3BCF1D3F1DC400066351 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCE1D3F1DC400066351 /* UIDevice+Extension.swift */; };
+		D644BB071D3F619700D8B8BE /* GHZCustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */; };
 		D6493B061D3E52F0000E0A29 /* GHZLoadProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6493B051D3E52F0000E0A29 /* GHZLoadProgressView.swift */; };
+		D65A019E1D3F7E0A0017A67B /* GHZSearchProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A019D1D3F7E0A0017A67B /* GHZSearchProductModel.swift */; };
 		D662428D1D3E2CF1003AFD30 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662428C1D3E2CF1003AFD30 /* UIColor+Extension.swift */; };
 		D662428F1D3E3E66003AFD30 /* GHZHomeHotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D662428E1D3E3E66003AFD30 /* GHZHomeHotView.swift */; };
 		D66242911D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66242901D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift */; };
+		D66F9D991D3F66F000F48794 /* GHZSearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9D981D3F66F000F48794 /* GHZSearchProductViewController.swift */; };
+		D66F9D9C1D3F710500F48794 /* GHZSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9D9B1D3F710500F48794 /* GHZSearchView.swift */; };
 		D67E2C821D3D1BF100F9CC73 /* GHZCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */; };
 		D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */; };
 		D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */; };
@@ -52,6 +63,7 @@
 		D6E29AE11D3D0FC600A15AF7 /* GHZHomeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */; };
 		D6E29AE31D3D0FC600A15AF7 /* GHZHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */; };
 		D6E29AE61D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29AE41D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift */; };
+		D6E43D0C1D3F1F8B009F25C5 /* GHZShopCartRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E43D0B1D3F1F8B009F25C5 /* GHZShopCartRedDotView.swift */; };
 		D6EA9FD21D3BBEA8005A1093 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6EA9FB81D3BBEA8005A1093 /* UMSocialLocalizable.strings */; };
 		D6EA9FD31D3BBEA8005A1093 /* libUMSocial_Sdk_5.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EA9FC61D3BBEA8005A1093 /* libUMSocial_Sdk_5.2.1.a */; };
 		D6EA9FD41D3BBEA8005A1093 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6EA9FC81D3BBEA8005A1093 /* UMSCommentDetailController.xib */; };
@@ -79,7 +91,6 @@
 		D6FADE2B1D3E007500305104 /* GHZCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE2A1D3E007500305104 /* GHZCustomButton.swift */; };
 		D6FADE2D1D3E104200305104 /* GHZAddressTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE2C1D3E104200305104 /* GHZAddressTitleView.swift */; };
 		D6FADE2F1D3E1BB400305104 /* GHZSeletedAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE2E1D3E1BB400305104 /* GHZSeletedAddressViewController.swift */; };
-		D6FADE321D3E20C800305104 /* GHZSearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE311D3E20C800305104 /* GHZSearchProductViewController.swift */; };
 		D6FADE341D3E20EE00305104 /* GHZQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE331D3E20EE00305104 /* GHZQRCodeViewController.swift */; };
 		D6FADE361D3E210500305104 /* GHZMyAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE351D3E210500305104 /* GHZMyAddressViewController.swift */; };
 		D6FADE391D3E24A100305104 /* GHZCustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FADE381D3E24A100305104 /* GHZCustomCollectionView.swift */; };
@@ -91,12 +102,23 @@
 		388B0350FFA0DE6B061E2F32 /* Pods_GHZSwiftB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GHZSwiftB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A067F511DF8BE10D385DB83 /* Pods-GHZSwiftB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZSwiftB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHZSwiftB/Pods-GHZSwiftB.debug.xcconfig"; sourceTree = "<group>"; };
 		C8A48957AF03767A6910746D /* Pods-GHZSwiftB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHZSwiftB.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHZSwiftB/Pods-GHZSwiftB.release.xcconfig"; sourceTree = "<group>"; };
+		D61284C31D3F5672006A7304 /* GHZActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZActionSheet.swift; sourceTree = "<group>"; };
+		D61284C51D3F5752006A7304 /* GHZYellowShopCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZYellowShopCartView.swift; sourceTree = "<group>"; };
+		D615FA711D3F636200B058C6 /* GHZRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZRefreshHeader.swift; sourceTree = "<group>"; };
 		D616CBCD1D3E7DDF005159AE /* GHZProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZProductDetailViewController.swift; sourceTree = "<group>"; };
 		D620A90E1D3DC20B00535929 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../Library/Developer/Xcode/DerivedData/GHZSwiftB-cihgwxysypndnyghzssizlzhbwuv/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		D62D3BC81D3F1C1100066351 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D62D3BCA1D3F1D2600066351 /* GHZUserShopCartTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZUserShopCartTools.swift; sourceTree = "<group>"; };
+		D62D3BCC1D3F1D8A00066351 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D62D3BCE1D3F1DC400066351 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCustomTableView.swift; sourceTree = "<group>"; };
 		D6493B051D3E52F0000E0A29 /* GHZLoadProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZLoadProgressView.swift; sourceTree = "<group>"; };
+		D65A019D1D3F7E0A0017A67B /* GHZSearchProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchProductModel.swift; sourceTree = "<group>"; };
 		D662428C1D3E2CF1003AFD30 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D662428E1D3E3E66003AFD30 /* GHZHomeHotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHotView.swift; sourceTree = "<group>"; };
 		D66242901D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHotIconImageView.swift; sourceTree = "<group>"; };
+		D66F9D981D3F66F000F48794 /* GHZSearchProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchProductViewController.swift; sourceTree = "<group>"; };
+		D66F9D9B1D3F710500F48794 /* GHZSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchView.swift; sourceTree = "<group>"; };
 		D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCycleScrollView.swift; sourceTree = "<group>"; };
 		D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHeaderData.swift; sourceTree = "<group>"; };
 		D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZ_Extension.swift; sourceTree = "<group>"; };
@@ -140,6 +162,7 @@
 		D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeFooterView.swift; sourceTree = "<group>"; };
 		D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHeaderView.swift; sourceTree = "<group>"; };
 		D6E29AE41D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6E43D0B1D3F1F8B009F25C5 /* GHZShopCartRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZShopCartRedDotView.swift; sourceTree = "<group>"; };
 		D6EA9FB91D3BBEA8005A1093 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		D6EA9FBB1D3BBEA8005A1093 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		D6EA9FBC1D3BBEA8005A1093 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -196,7 +219,6 @@
 		D6FADE2A1D3E007500305104 /* GHZCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCustomButton.swift; sourceTree = "<group>"; };
 		D6FADE2C1D3E104200305104 /* GHZAddressTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZAddressTitleView.swift; sourceTree = "<group>"; };
 		D6FADE2E1D3E1BB400305104 /* GHZSeletedAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSeletedAddressViewController.swift; sourceTree = "<group>"; };
-		D6FADE311D3E20C800305104 /* GHZSearchProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchProductViewController.swift; sourceTree = "<group>"; };
 		D6FADE331D3E20EE00305104 /* GHZQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZQRCodeViewController.swift; sourceTree = "<group>"; };
 		D6FADE351D3E210500305104 /* GHZMyAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZMyAddressViewController.swift; sourceTree = "<group>"; };
 		D6FADE381D3E24A100305104 /* GHZCustomCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCustomCollectionView.swift; sourceTree = "<group>"; };
@@ -240,6 +262,47 @@
 				388B0350FFA0DE6B061E2F32 /* Pods_GHZSwiftB.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D644BB041D3F616100D8B8BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D644BB051D3F616900D8B8BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D65A019C1D3F7DF00017A67B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D65A019D1D3F7E0A0017A67B /* GHZSearchProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D66F9D971D3F66F000F48794 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D66F9D981D3F66F000F48794 /* GHZSearchProductViewController.swift */,
+				D66F9D9A1D3F670200F48794 /* View */,
+				D65A019C1D3F7DF00017A67B /* Model */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D66F9D9A1D3F670200F48794 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D66F9D9B1D3F710500F48794 /* GHZSearchView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D69494A11D3BAF1D007B6FBD = {
@@ -305,6 +368,9 @@
 				D6A452521D3BB8E0008B4B3C /* UIView+Extension.swift */,
 				D6FADE281D3DFF1000305104 /* UIBarButtonItem+Extension.swift */,
 				D662428C1D3E2CF1003AFD30 /* UIColor+Extension.swift */,
+				D62D3BC81D3F1C1100066351 /* UIImage+Extension.swift */,
+				D62D3BCC1D3F1D8A00066351 /* String+Extension.swift */,
+				D62D3BCE1D3F1DC400066351 /* UIDevice+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -317,6 +383,7 @@
 				D69494C51D3BAF70007B6FBD /* ShopCart */,
 				D69494C41D3BAF70007B6FBD /* Me */,
 				D6FADE301D3E209A00305104 /* Assits */,
+				D66F9D971D3F66F000F48794 /* Search */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,6 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				D6A4524D1D3BB4C9008B4B3C /* GHZSuperMarketController.swift */,
+				D644BB041D3F616100D8B8BE /* Model */,
+				D644BB051D3F616900D8B8BE /* View */,
 			);
 			path = SuperMarket;
 			sourceTree = "<group>";
@@ -410,7 +479,12 @@
 				D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */,
 				D6FADE261D3DDB6800305104 /* GHZUserInfo.swift */,
 				D6FADE2A1D3E007500305104 /* GHZCustomButton.swift */,
+				D6E43D0B1D3F1F8B009F25C5 /* GHZShopCartRedDotView.swift */,
+				D62D3BCA1D3F1D2600066351 /* GHZUserShopCartTools.swift */,
 				D6493B051D3E52F0000E0A29 /* GHZLoadProgressView.swift */,
+				D61284C31D3F5672006A7304 /* GHZActionSheet.swift */,
+				D61284C51D3F5752006A7304 /* GHZYellowShopCartView.swift */,
+				D615FA711D3F636200B058C6 /* GHZRefreshHeader.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -558,7 +632,6 @@
 		D6FADE301D3E209A00305104 /* Assits */ = {
 			isa = PBXGroup;
 			children = (
-				D6FADE311D3E20C800305104 /* GHZSearchProductViewController.swift */,
 				D6FADE331D3E20EE00305104 /* GHZQRCodeViewController.swift */,
 				D6FADE351D3E210500305104 /* GHZMyAddressViewController.swift */,
 			);
@@ -735,28 +808,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				D67E2C821D3D1BF100F9CC73 /* GHZCycleScrollView.swift in Sources */,
+				D61284C41D3F5672006A7304 /* GHZActionSheet.swift in Sources */,
+				D615FA721D3F636200B058C6 /* GHZRefreshHeader.swift in Sources */,
 				D6493B061D3E52F0000E0A29 /* GHZLoadProgressView.swift in Sources */,
 				D6E29AE11D3D0FC600A15AF7 /* GHZHomeFooterView.swift in Sources */,
 				D6FADE361D3E210500305104 /* GHZMyAddressViewController.swift in Sources */,
+				D6E43D0C1D3F1F8B009F25C5 /* GHZShopCartRedDotView.swift in Sources */,
 				D6FADE341D3E20EE00305104 /* GHZQRCodeViewController.swift in Sources */,
-				D6FADE321D3E20C800305104 /* GHZSearchProductViewController.swift in Sources */,
 				D68D18161D3CFCF100FD1B53 /* GHZHomeWebViewController.swift in Sources */,
 				D6A452401D3BB0F4008B4B3C /* GHZBaseViewController.swift in Sources */,
 				D662428F1D3E3E66003AFD30 /* GHZHomeHotView.swift in Sources */,
 				D6FADE251D3DDA5B00305104 /* GHZAddressData.swift in Sources */,
 				D6E29AE61D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift in Sources */,
 				D6FADE2D1D3E104200305104 /* GHZAddressTitleView.swift in Sources */,
+				D644BB071D3F619700D8B8BE /* GHZCustomTableView.swift in Sources */,
 				D6A452481D3BB498008B4B3C /* GHZHomePageController.swift in Sources */,
 				D6FADE1F1D3DC80E00305104 /* GHZAnimationViewController.swift in Sources */,
+				D62D3BCB1D3F1D2600066351 /* GHZUserShopCartTools.swift in Sources */,
 				D6A452421D3BB18E008B4B3C /* GHZNavViewController.swift in Sources */,
 				D6E29AE31D3D0FC600A15AF7 /* GHZHomeHeaderView.swift in Sources */,
+				D65A019E1D3F7E0A0017A67B /* GHZSearchProductModel.swift in Sources */,
 				D6FADE271D3DDB6800305104 /* GHZUserInfo.swift in Sources */,
 				D6A452591D3BBADC008B4B3C /* AnimationTabBarController.swift in Sources */,
+				D61284C61D3F5752006A7304 /* GHZYellowShopCartView.swift in Sources */,
+				D62D3BCD1D3F1D8A00066351 /* String+Extension.swift in Sources */,
 				D6A452461D3BB30B008B4B3C /* Public.swift in Sources */,
 				D6A4524E1D3BB4C9008B4B3C /* GHZSuperMarketController.swift in Sources */,
 				D6FADE3B1D3E273700305104 /* GHZHomePageFreshHot.swift in Sources */,
 				D69494AE1D3BAF1D007B6FBD /* AppDelegate.swift in Sources */,
 				D6FADE291D3DFF1000305104 /* UIBarButtonItem+Extension.swift in Sources */,
+				D66F9D991D3F66F000F48794 /* GHZSearchProductViewController.swift in Sources */,
 				D66242911D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift in Sources */,
 				D6A4524A1D3BB4A7008B4B3C /* GHZMeController.swift in Sources */,
 				D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */,
@@ -765,6 +846,9 @@
 				D6A452571D3BBA34008B4B3C /* GHZTabBarViewController.swift in Sources */,
 				D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */,
 				D6A452531D3BB8E0008B4B3C /* UIView+Extension.swift in Sources */,
+				D62D3BCF1D3F1DC400066351 /* UIDevice+Extension.swift in Sources */,
+				D62D3BC91D3F1C1100066351 /* UIImage+Extension.swift in Sources */,
+				D66F9D9C1D3F710500F48794 /* GHZSearchView.swift in Sources */,
 				D6FADE391D3E24A100305104 /* GHZCustomCollectionView.swift in Sources */,
 				D6A452551D3BB925008B4B3C /* GHZShopCarRedDotView.swift in Sources */,
 				D6FADE2B1D3E007500305104 /* GHZCustomButton.swift in Sources */,
@@ -841,7 +925,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -881,7 +965,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -942,6 +1026,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZSwiftB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1bb59e99-06aa-466b-af93-d18c05474987";
+				PROVISIONING_PROFILE_SPECIFIER = 3SKZE5ZR6E/y;
 				SWIFT_OBJC_BRIDGING_HEADER = "GHZSwiftB/GHZSwiftB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

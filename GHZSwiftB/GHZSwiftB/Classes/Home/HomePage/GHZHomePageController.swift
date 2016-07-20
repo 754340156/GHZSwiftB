@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class GHZHomePageController: GHZAnimationViewController
 {
     
@@ -23,6 +23,7 @@ class GHZHomePageController: GHZAnimationViewController
         setCollection()
         setHeaderView()
         setNotificationCenter()
+        setProgressHud()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,7 +32,7 @@ class GHZHomePageController: GHZAnimationViewController
             collectionView.reloadData()
         }
         
-        NotificationCenter.default().post(name: "GHZSearchViewControllerDeinit" as NSNotification.Name, object: nil)
+        NotificationCenter.default().post(name: NSNotification.Name(rawValue: GHZSearchViewControllerDeinit), object: nil)
     }
     deinit {
         NotificationCenter.default().removeObserver(self)
@@ -48,6 +49,10 @@ class GHZHomePageController: GHZAnimationViewController
         collectionView.register(GHZHomeHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView")
         collectionView.register(GHZHomeFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "FooterView")
         collectionView.register(GHZHomeCollectionViewCell.self, forCellWithReuseIdentifier: "GHZHomeCollectionViewCell")
+        
+        let refreshHeadView = GHZRefreshHeader(refreshingTarget: self, refreshingAction: Selector(("headRefresh")))
+        refreshHeadView?.gifView?.frame = CGRect(x: 0, y: 30, width: 100, height: 100)
+        collectionView.mj_header = refreshHeadView
     }
     func setHeaderView()  {
         weak var weakSelf = self
@@ -87,26 +92,71 @@ class GHZHomePageController: GHZAnimationViewController
             }
         }
     }
+    //刷新
+    private func headRefresh() {
+        headerView?.headerData = nil
+        headData = nil
+        freshHotData = nil
+        var headDataLoadFinish = false
+        var freshHotLoadFinish = false
+        
+        weak var weakSelf = self
+        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now), Int64(0.8 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, DispatchQueue.main()) { () -> Void in
+            GHZHeaderData.loadHomeHeadData { (data, error) -> Void in
+                if error == nil {
+                    headDataLoadFinish = true
+                    weakSelf?.headerView?.headerData = data
+                    weakSelf?.headData = data
+                    if headDataLoadFinish && freshHotLoadFinish {
+                        weakSelf?.collectionView.reloadData()
+                        weakSelf?.collectionView.mj_header.endRefreshing()
+                    }
+                }
+            }
+            
+            GHZHomePageFreshHot.loadFreshHotData { (data, error) -> Void in
+                freshHotLoadFinish = true
+                weakSelf?.freshHotData = data
+                if headDataLoadFinish && freshHotLoadFinish {
+                    weakSelf?.collectionView.reloadData()
+                    weakSelf?.collectionView.mj_header.endRefreshing()
+                }
+            }
+        }
+
+    }
     func setNotificationCenter(){
-        NotificationCenter.default().addObserver(self, selector: Selector(("HomeHeadViewHeightDidChange")), name: HomeHeadViewHeightDidChange, object: nil)
-        NotificationCenter.default().addObserver(self, selector: Selector(("GHZHomeShopsInventory")), name: GHZHomeShopsInventory, object: nil)
-        NotificationCenter.default().addObserver(self, selector: Selector(("GHZShopCartProductNumberDidChange")), name: GHZShopCartProductNumberDidChange, object: nil)
+        NotificationCenter.default().addObserver(self, selector: #selector(GHZHomePageController.HomeHeadViewHeightDidChange), name:
+            "HomeHeadViewHeightDidChange", object: nil)
+        NotificationCenter.default().addObserver(self, selector: #selector(GHZHomePageController.GHZHomeShopsInventory), name: "GHZHomeShopsInventory", object: nil)
+        NotificationCenter.default().addObserver(self, selector: #selector(GHZHomePageController.GHZShopCartProductNumberDidChange), name:  "GHZShopCartProductNumberDidChange", object: nil)
+    }
+    
+    private func setProgressHud()
+    {
+        SVProgressHUD.setBackgroundColor(UIColor.customColorWithFloat(r: 240, g: 240, b: 240, a: 1.0))
+        SVProgressHUD.setFont(UIFont.systemFont(ofSize: 16))
     }
     //通知方法
     //头视图高度发生改变
-//    func HomeHeadViewHeightDidChange(noti:Notification)
-//    {
-//        
-//    }
+    func HomeHeadViewHeightDidChange(noti:Notification)
+    {
+        collectionView!.contentInset = UIEdgeInsetsMake(noti.object as! CGFloat, 0, GHZNavigationHeight, 0)
+        collectionView!.setContentOffset(CGPoint(x: 0, y: -(collectionView!.contentInset.top)), animated: false)
+        lastContentOffsetY = collectionView.contentOffset.y
+    }
     //商品不足
-//    func GHZHomeShopsInventory(noti:Notification)
-//    {
-//        
-//    }
+    func GHZHomeShopsInventory(noti:Notification)
+    {
+        if let goodsName = noti.object as? String {
+            SVProgressHUD.show(#imageLiteral(resourceName: "v2_orderSuccess"), status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+        }
+    }
     //商品数量发生改变
-//    func GHZShopCartProductNumberDidChange(noti:Notification) {
-//        
-//    }
+    func GHZShopCartProductNumberDidChange() {
+        collectionView.reloadData()
+    }
     //TODO: 刷新没写
     
 }
@@ -133,7 +183,19 @@ extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:GHZHomeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GHZHomeCollectionViewCell", for: indexPath) as! GHZHomeCollectionViewCell
-        cell.backgroundColor = UIColor.cyan()
+        if headData?.data?.activities?.count <= 0 {
+            return cell
+        }
+        
+        if indexPath.section == 0 {
+            cell.activities = headData!.data!.activities![indexPath.row]
+        } else if indexPath.section == 1 {
+            cell.shops = freshHotData!.data![indexPath.row]
+            weak var weakSelf = self
+            cell.addButtonClick = ({ (imageView) -> () in
+                weakSelf?.addProductsToBigShopCarAnimation(imageView: imageView)
+            })
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -171,12 +233,14 @@ extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSo
             return headerView
             
         }
-        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "FooterView", for: indexPath)
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "FooterView", for: indexPath) as! GHZHomeFooterView
         if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter{
-            footerView.
+            footerView.showLabel()
+            footerView.tag = 100
         }else
         {
-            footerView.
+            footerView.hideLabel()
+            footerView.tag = 1
         }
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("ClickMoreShop")))
         footerView.addGestureRecognizer(tap)
@@ -209,7 +273,11 @@ extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSo
     //动画
     private func startAnimation(view:UIView,offset:CGFloat,duration:TimeInterval)
     {
+        view.transform = CGAffineTransform(translationX: 0, y: offset)
         
+        UIView.animate(withDuration: duration, animations: { () -> Void in
+            view.transform = CGAffineTransform.identity
+        })
     }
  
     //ScrollViewDelegate
@@ -229,7 +297,8 @@ extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSo
             navigationController?.pushViewController(webVC, animated: true)
         }else
         {
-            let productVC = GHZ
+            let productVC = GHZProductDetailViewController(shops: (freshHotData?.data?[indexPath.row])!)
+            navigationController?.pushViewController(productVC, animated: true)
             
         }
     }
