@@ -80,22 +80,4 @@ class GHZAddressTitleView: UIView {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

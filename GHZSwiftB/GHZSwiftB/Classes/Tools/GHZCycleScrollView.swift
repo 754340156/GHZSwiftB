@@ -9,21 +9,21 @@
 import UIKit
 
 class GHZCycleScrollView: UIView {
-    private var contentScrollView:UIScrollView
-    private var pageControl:UIPageControl
+    private var contentScrollView:UIScrollView!
+    private var pageControl:UIPageControl!
     private var timer:Timer?
     
     private let maxCount = 3
-    private var placeholderImage:UIImage
+    private var placeholderImage:UIImage?
     private var clickImageView:((index:Int)->())?
-    var headData:GHZHeaderData  {
+    var headData:GHZHeaderData?  {
         didSet {
             if timer != nil {
                 timer?.invalidate()
                 timer = nil
             }
-            if headData.data?.focus?.count >= 0{
-                pageControl.numberOfPages = (headData.data?.focus?.count)!
+            if headData?.data?.focus?.count >= 0{
+                pageControl.numberOfPages = (headData?.data?.focus?.count)!
                 pageControl.currentPage = 0
                 upDateScrollView()
                 startTimer()
@@ -32,8 +32,8 @@ class GHZCycleScrollView: UIView {
     }
     
     
-    override convenience init (frame: CGRect) {
-        self.init(frame: frame)
+     override init (frame: CGRect) {
+        super.init(frame: frame)
         setScrollView()
         setPageControll()
         
@@ -81,8 +81,8 @@ class GHZCycleScrollView: UIView {
             }
             
             imageView.tag = index
-            if headData.data?.focus?.count > 0 {
-                imageView.sd_setImage(with: URL(string: (headData.data?.focus?[index].img)!), placeholderImage: placeholderImage)
+            if headData?.data?.focus?.count > 0 {
+                imageView.sd_setImage(with: URL(string: (headData?.data?.focus?[index].img)!), placeholderImage: placeholderImage)
             }
             contentScrollView.contentOffset = CGPoint(x: contentScrollView.width, y: 0)
         }
@@ -92,6 +92,7 @@ class GHZCycleScrollView: UIView {
     private func startTimer()
     {
         timer = Timer(timeInterval: 3.0, target: self, selector: Selector(("next")), userInfo: nil, repeats: true)
+        RunLoop.main().add(timer!, forMode: RunLoopMode.commonModes)
     }
     //关闭定时器
     private func stopTimer()

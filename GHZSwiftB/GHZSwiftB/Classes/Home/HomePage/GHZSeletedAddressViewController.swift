@@ -35,36 +35,28 @@ class GHZSeletedAddressViewController: GHZAnimationViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(clickTitleView))
         navigationItem.titleView?.addGestureRecognizer(tap)
     }
-    
-    //FIXME: 没写完
     func clickScanCode()  {
         let QRCodeVC = GHZQRCodeViewController()
         navigationController?.pushViewController(QRCodeVC, animated: true)
-  
     }
     func clickSearch()  {
         let searchProductVC = GHZSearchProductViewController()
         navigationController?.pushViewController(searchProductVC, animated: false)
     }
     func clickTitleView()  {
-        let myAddressVC = GHZMyAddressViewController()
+        weak var weakSelf = self
+        let myAddressVC = GHZMyAddressViewController { (adress) -> () in
+            let titleView = GHZAddressTitleView(frame: CGRect(x: 0, y: 0, width: 0, height: 30))
+            titleView.setTitle(title: adress.address!)
+            titleView.frame = CGRect(x: 0, y: 0, width: titleView.addressTitleViewWidth, height: 30)
+            weakSelf?.navigationItem.titleView = titleView
+            GHZUserInfo.sharedUserInfo.setDefaultAdress(address: adress)
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(GHZSeletedAddressViewController.clickTitleView))
+            weakSelf?.navigationItem.titleView?.addGestureRecognizer(tap)
+        }
+        myAddressVC.isSelectVC = true
         navigationController?.pushViewController(myAddressVC, animated: true)
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

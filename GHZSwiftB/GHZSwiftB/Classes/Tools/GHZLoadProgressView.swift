@@ -37,9 +37,9 @@ class GHZLoadProgressView: UIView {
             }) { (finish) in
                 if finish
                 {
-                    let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(0.4 * Double(NSEC_PER_SEC)))
-                    time.after(when: DispatchQueue.main(), execute: { () -> Void in
-                        UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    let time = DispatchTime.now() + Double(Int64(0.4 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                    DispatchQueue.main.after(when: time, execute: {
+                        UIView.animate(withDuration: 0.3, animations: { () -> Void in
                             weakSelf!.frame.size.width = weakSelf!.ProgressViewWidth * 0.8
                         })
                     })

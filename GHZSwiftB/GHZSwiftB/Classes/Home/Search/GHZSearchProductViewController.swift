@@ -179,7 +179,7 @@ class GHZSearchProductViewController: GHZAnimationViewController {
         searchCollectionView!.delegate = self
         searchCollectionView!.dataSource = self
         searchCollectionView!.backgroundColor = GHZGlobalBackgroundColor
-        searchCollectionView!.register(GHZHomeCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        searchCollectionView!.register(GHZHomeCollectionViewCell.self, forCellWithReuseIdentifier: "GHZHomeCollectionViewCell")
         searchCollectionView?.isHidden = true
         collectionHeadView = NOSearchProductView(frame: CGRect(x: 0, y: -80, width: GHZScreenWidth, height: 80))
         searchCollectionView?.addSubview(collectionHeadView!)
@@ -224,17 +224,17 @@ class GHZSearchProductViewController: GHZAnimationViewController {
         SVProgressHUD .show(withStatus: "正在全力加载")
         
         weak var weakSelf = self
-        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(1.0 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+        let time = DispatchTime.now() + Double(Int64(1.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.after(when: time) { 
             GHZSearchProductModel.loadSearchData { (data, error) -> Void in
                 if data?.data?.count > 0 {
                     weakSelf?.shops = data!.data!
-                    weakSelf?.searchCollectionView?.hidden = false
-                    weakSelf?.yellowShopCar?.hidden = false
+                    weakSelf?.searchCollectionView?.isHidden = false
+                    weakSelf?.yellowShopCar?.isHidden = false
                     weakSelf?.searchCollectionView?.reloadData()
-                    weakSelf?.collectionHeadView?.setSearchProductLabelText(keyWord!)
+                    weakSelf?.collectionHeadView?.setSearchProductLabelText(text: keyWord!)
                     weakSelf?.searchCollectionView?.setContentOffset(CGPoint(x: 0, y: -80), animated: false)
-                    sv.dismiss()
+                    SVProgressHUD.dismiss()
                 }
             }
         }
@@ -277,7 +277,7 @@ extension GHZSearchProductViewController: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! GHZHomeCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GHZHomeCollectionViewCell", for: indexPath) as! GHZHomeCollectionViewCell
         cell.shops = shops![indexPath.row]
         weak var tmpSelf = self
         cell.addButtonClick = ({ (imageView) -> () in

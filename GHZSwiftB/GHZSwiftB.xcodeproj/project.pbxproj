@@ -15,6 +15,7 @@
 		D62D3BCB1D3F1D2600066351 /* GHZUserShopCartTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCA1D3F1D2600066351 /* GHZUserShopCartTools.swift */; };
 		D62D3BCD1D3F1D8A00066351 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCC1D3F1D8A00066351 /* String+Extension.swift */; };
 		D62D3BCF1D3F1DC400066351 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D3BCE1D3F1DC400066351 /* UIDevice+Extension.swift */; };
+		D630C0061D4079B00057AA33 /* GHZEditAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D630C0051D4079B00057AA33 /* GHZEditAddressViewController.swift */; };
 		D644BB071D3F619700D8B8BE /* GHZCustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */; };
 		D6493B061D3E52F0000E0A29 /* GHZLoadProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6493B051D3E52F0000E0A29 /* GHZLoadProgressView.swift */; };
 		D65A019E1D3F7E0A0017A67B /* GHZSearchProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65A019D1D3F7E0A0017A67B /* GHZSearchProductModel.swift */; };
@@ -23,10 +24,15 @@
 		D66242911D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66242901D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift */; };
 		D66F9D991D3F66F000F48794 /* GHZSearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9D981D3F66F000F48794 /* GHZSearchProductViewController.swift */; };
 		D66F9D9C1D3F710500F48794 /* GHZSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F9D9B1D3F710500F48794 /* GHZSearchView.swift */; };
+		D67C865A1D405D8500F1F1AB /* GHZFileTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C86591D405D8500F1F1AB /* GHZFileTools.swift */; };
 		D67E2C821D3D1BF100F9CC73 /* GHZCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */; };
 		D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */; };
 		D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */; };
 		D68D18161D3CFCF100FD1B53 /* GHZHomeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68D18151D3CFCF100FD1B53 /* GHZHomeWebViewController.swift */; };
+		D691A6401D406D6C008A2396 /* GHZProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691A63F1D406D6C008A2396 /* GHZProductsViewController.swift */; };
+		D691A6441D406EA4008A2396 /* GHZSupermarketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691A6431D406EA4008A2396 /* GHZSupermarketHeaderView.swift */; };
+		D691A6461D406ED2008A2396 /* GHZProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691A6451D406ED2008A2396 /* GHZProductTableViewCell.swift */; };
+		D691A6481D4071D3008A2396 /* GHZSupermarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691A6471D4071D3008A2396 /* GHZSupermarketModel.swift */; };
 		D69494AE1D3BAF1D007B6FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69494AD1D3BAF1D007B6FBD /* AppDelegate.swift */; };
 		D69494B31D3BAF1D007B6FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69494B11D3BAF1D007B6FBD /* Main.storyboard */; };
 		D69494B51D3BAF1E007B6FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69494B41D3BAF1E007B6FBD /* Assets.xcassets */; };
@@ -59,6 +65,9 @@
 		D6A452551D3BB925008B4B3C /* GHZShopCarRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452541D3BB925008B4B3C /* GHZShopCarRedDotView.swift */; };
 		D6A452571D3BBA34008B4B3C /* GHZTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452561D3BBA34008B4B3C /* GHZTabBarViewController.swift */; };
 		D6A452591D3BBADC008B4B3C /* AnimationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A452581D3BBADC008B4B3C /* AnimationTabBarController.swift */; };
+		D6AE9D121D407D860086AFD9 /* GHZAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AE9D111D407D860086AFD9 /* GHZAddressTableViewCell.swift */; };
+		D6DE5FD21D406810003985AA /* GHZShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DE5FD11D406810003985AA /* GHZShareManager.swift */; };
+		D6DE5FD61D406949003985AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DE5FD51D406949003985AA /* SystemConfiguration.framework */; };
 		D6E29ADB1D3D0D3000A15AF7 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */; };
 		D6E29AE11D3D0FC600A15AF7 /* GHZHomeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */; };
 		D6E29AE31D3D0FC600A15AF7 /* GHZHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */; };
@@ -111,6 +120,7 @@
 		D62D3BCA1D3F1D2600066351 /* GHZUserShopCartTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZUserShopCartTools.swift; sourceTree = "<group>"; };
 		D62D3BCC1D3F1D8A00066351 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D62D3BCE1D3F1DC400066351 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		D630C0051D4079B00057AA33 /* GHZEditAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZEditAddressViewController.swift; sourceTree = "<group>"; };
 		D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCustomTableView.swift; sourceTree = "<group>"; };
 		D6493B051D3E52F0000E0A29 /* GHZLoadProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZLoadProgressView.swift; sourceTree = "<group>"; };
 		D65A019D1D3F7E0A0017A67B /* GHZSearchProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchProductModel.swift; sourceTree = "<group>"; };
@@ -119,10 +129,15 @@
 		D66242901D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHotIconImageView.swift; sourceTree = "<group>"; };
 		D66F9D981D3F66F000F48794 /* GHZSearchProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchProductViewController.swift; sourceTree = "<group>"; };
 		D66F9D9B1D3F710500F48794 /* GHZSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSearchView.swift; sourceTree = "<group>"; };
+		D67C86591D405D8500F1F1AB /* GHZFileTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZFileTools.swift; sourceTree = "<group>"; };
 		D67E2C811D3D1BF100F9CC73 /* GHZCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZCycleScrollView.swift; sourceTree = "<group>"; };
 		D67E2C831D3D1D4300F9CC73 /* GHZHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHeaderData.swift; sourceTree = "<group>"; };
 		D67E2C851D3D269500F9CC73 /* GHZ_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZ_Extension.swift; sourceTree = "<group>"; };
 		D68D18151D3CFCF100FD1B53 /* GHZHomeWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeWebViewController.swift; sourceTree = "<group>"; };
+		D691A63F1D406D6C008A2396 /* GHZProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZProductsViewController.swift; sourceTree = "<group>"; };
+		D691A6431D406EA4008A2396 /* GHZSupermarketHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSupermarketHeaderView.swift; sourceTree = "<group>"; };
+		D691A6451D406ED2008A2396 /* GHZProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZProductTableViewCell.swift; sourceTree = "<group>"; };
+		D691A6471D4071D3008A2396 /* GHZSupermarketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZSupermarketModel.swift; sourceTree = "<group>"; };
 		D69494AA1D3BAF1D007B6FBD /* GHZSwiftB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHZSwiftB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69494AD1D3BAF1D007B6FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69494B21D3BAF1D007B6FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +173,10 @@
 		D6A452541D3BB925008B4B3C /* GHZShopCarRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZShopCarRedDotView.swift; sourceTree = "<group>"; };
 		D6A452561D3BBA34008B4B3C /* GHZTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZTabBarViewController.swift; sourceTree = "<group>"; };
 		D6A452581D3BBADC008B4B3C /* AnimationTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTabBarController.swift; sourceTree = "<group>"; };
+		D6AE9D111D407D860086AFD9 /* GHZAddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZAddressTableViewCell.swift; sourceTree = "<group>"; };
+		D6DE5FD11D406810003985AA /* GHZShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZShareManager.swift; sourceTree = "<group>"; };
+		D6DE5FD31D406903003985AA /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		D6DE5FD51D406949003985AA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "../../../Library/Developer/Xcode/DerivedData/GHZSwiftB-cihgwxysypndnyghzssizlzhbwuv/Build/Products/Debug-iphonesimulator/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		D6E29ADE1D3D0FC600A15AF7 /* GHZHomeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeFooterView.swift; sourceTree = "<group>"; };
 		D6E29AE01D3D0FC600A15AF7 /* GHZHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHZHomeHeaderView.swift; sourceTree = "<group>"; };
@@ -230,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DE5FD61D406949003985AA /* SystemConfiguration.framework in Frameworks */,
 				D6E29ADB1D3D0D3000A15AF7 /* SVProgressHUD.framework in Frameworks */,
 				D6EA9FFE1D3BBEBA005A1093 /* libSocialQQ.a in Frameworks */,
 				D6EA9FFF1D3BBEBA005A1093 /* TencentOpenAPI.framework in Frameworks */,
@@ -257,6 +277,8 @@
 		9599E06B86E87F10233937EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D6DE5FD51D406949003985AA /* SystemConfiguration.framework */,
+				D6DE5FD31D406903003985AA /* SceneKit.framework */,
 				D620A90E1D3DC20B00535929 /* SDWebImage.framework */,
 				D6E29ADA1D3D0D3000A15AF7 /* SVProgressHUD.framework */,
 				388B0350FFA0DE6B061E2F32 /* Pods_GHZSwiftB.framework */,
@@ -267,6 +289,7 @@
 		D644BB041D3F616100D8B8BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D691A6471D4071D3008A2396 /* GHZSupermarketModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +298,8 @@
 			isa = PBXGroup;
 			children = (
 				D644BB061D3F619700D8B8BE /* GHZCustomTableView.swift */,
+				D691A6431D406EA4008A2396 /* GHZSupermarketHeaderView.swift */,
+				D691A6451D406ED2008A2396 /* GHZProductTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A4524D1D3BB4C9008B4B3C /* GHZSuperMarketController.swift */,
+				D691A63F1D406D6C008A2396 /* GHZProductsViewController.swift */,
 				D644BB041D3F616100D8B8BE /* Model */,
 				D644BB051D3F616900D8B8BE /* View */,
 			);
@@ -485,8 +511,25 @@
 				D61284C31D3F5672006A7304 /* GHZActionSheet.swift */,
 				D61284C51D3F5752006A7304 /* GHZYellowShopCartView.swift */,
 				D615FA711D3F636200B058C6 /* GHZRefreshHeader.swift */,
+				D67C86591D405D8500F1F1AB /* GHZFileTools.swift */,
+				D6DE5FD11D406810003985AA /* GHZShareManager.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		D6AE9D0F1D407D690086AFD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6AE9D101D407D690086AFD9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6AE9D111D407D860086AFD9 /* GHZAddressTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D6E29ADC1D3D0FC600A15AF7 /* Model */ = {
@@ -634,6 +677,9 @@
 			children = (
 				D6FADE331D3E20EE00305104 /* GHZQRCodeViewController.swift */,
 				D6FADE351D3E210500305104 /* GHZMyAddressViewController.swift */,
+				D630C0051D4079B00057AA33 /* GHZEditAddressViewController.swift */,
+				D6AE9D0F1D407D690086AFD9 /* Model */,
+				D6AE9D101D407D690086AFD9 /* View */,
 			);
 			path = Assits;
 			sourceTree = "<group>";
@@ -818,9 +864,11 @@
 				D68D18161D3CFCF100FD1B53 /* GHZHomeWebViewController.swift in Sources */,
 				D6A452401D3BB0F4008B4B3C /* GHZBaseViewController.swift in Sources */,
 				D662428F1D3E3E66003AFD30 /* GHZHomeHotView.swift in Sources */,
+				D691A6481D4071D3008A2396 /* GHZSupermarketModel.swift in Sources */,
 				D6FADE251D3DDA5B00305104 /* GHZAddressData.swift in Sources */,
 				D6E29AE61D3D101F00A15AF7 /* GHZHomeCollectionViewCell.swift in Sources */,
 				D6FADE2D1D3E104200305104 /* GHZAddressTitleView.swift in Sources */,
+				D6AE9D121D407D860086AFD9 /* GHZAddressTableViewCell.swift in Sources */,
 				D644BB071D3F619700D8B8BE /* GHZCustomTableView.swift in Sources */,
 				D6A452481D3BB498008B4B3C /* GHZHomePageController.swift in Sources */,
 				D6FADE1F1D3DC80E00305104 /* GHZAnimationViewController.swift in Sources */,
@@ -830,20 +878,26 @@
 				D65A019E1D3F7E0A0017A67B /* GHZSearchProductModel.swift in Sources */,
 				D6FADE271D3DDB6800305104 /* GHZUserInfo.swift in Sources */,
 				D6A452591D3BBADC008B4B3C /* AnimationTabBarController.swift in Sources */,
+				D67C865A1D405D8500F1F1AB /* GHZFileTools.swift in Sources */,
 				D61284C61D3F5752006A7304 /* GHZYellowShopCartView.swift in Sources */,
 				D62D3BCD1D3F1D8A00066351 /* String+Extension.swift in Sources */,
 				D6A452461D3BB30B008B4B3C /* Public.swift in Sources */,
 				D6A4524E1D3BB4C9008B4B3C /* GHZSuperMarketController.swift in Sources */,
 				D6FADE3B1D3E273700305104 /* GHZHomePageFreshHot.swift in Sources */,
 				D69494AE1D3BAF1D007B6FBD /* AppDelegate.swift in Sources */,
+				D630C0061D4079B00057AA33 /* GHZEditAddressViewController.swift in Sources */,
 				D6FADE291D3DFF1000305104 /* UIBarButtonItem+Extension.swift in Sources */,
+				D691A6441D406EA4008A2396 /* GHZSupermarketHeaderView.swift in Sources */,
 				D66F9D991D3F66F000F48794 /* GHZSearchProductViewController.swift in Sources */,
+				D691A6461D406ED2008A2396 /* GHZProductTableViewCell.swift in Sources */,
 				D66242911D3E41BC003AFD30 /* GHZHomeHotIconImageView.swift in Sources */,
 				D6A4524A1D3BB4A7008B4B3C /* GHZMeController.swift in Sources */,
+				D691A6401D406D6C008A2396 /* GHZProductsViewController.swift in Sources */,
 				D67E2C861D3D269500F9CC73 /* GHZ_Extension.swift in Sources */,
 				D662428D1D3E2CF1003AFD30 /* UIColor+Extension.swift in Sources */,
 				D616CBCE1D3E7DDF005159AE /* GHZProductDetailViewController.swift in Sources */,
 				D6A452571D3BBA34008B4B3C /* GHZTabBarViewController.swift in Sources */,
+				D6DE5FD21D406810003985AA /* GHZShareManager.swift in Sources */,
 				D67E2C841D3D1D4300F9CC73 /* GHZHeaderData.swift in Sources */,
 				D6A452531D3BB8E0008B4B3C /* UIView+Extension.swift in Sources */,
 				D62D3BCF1D3F1DC400066351 /* UIDevice+Extension.swift in Sources */,
@@ -996,6 +1050,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZSwiftB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b9075c2c-8f4c-4018-9528-4db0784b4d1b";
+				PROVISIONING_PROFILE_SPECIFIER = 6S82JEFLC7/111111sunbin;
 				SWIFT_OBJC_BRIDGING_HEADER = "GHZSwiftB/GHZSwiftB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1026,8 +1082,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GHZSwiftB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1bb59e99-06aa-466b-af93-d18c05474987";
-				PROVISIONING_PROFILE_SPECIFIER = 3SKZE5ZR6E/y;
+				PROVISIONING_PROFILE = "b9075c2c-8f4c-4018-9528-4db0784b4d1b";
+				PROVISIONING_PROFILE_SPECIFIER = 6S82JEFLC7/111111sunbin;
 				SWIFT_OBJC_BRIDGING_HEADER = "GHZSwiftB/GHZSwiftB-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

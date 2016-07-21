@@ -20,7 +20,7 @@ class GHZAnimationViewController: GHZBaseViewController {
         super.viewDidLoad()
     }
     
-    private func addProductsAnimation(imageView:UIImageView)
+     func addProductsAnimation(_ imageView:UIImageView)
     {
         if animationLayerArray == nil {
             animationLayerArray = Array()

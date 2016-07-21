@@ -44,12 +44,14 @@ class GHZHomePageController: GHZAnimationViewController
         flowLayout.minimumInteritemSpacing = 5;
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
         flowLayout.headerReferenceSize = CGSize(width: 0, height: HomeCollectionViewCellMargin)
-        
-        view.addSubview(self.collectionView)
+        collectionView = GHZCustomCollectionView(frame: CGRect(x: 0, y: 0, width: GHZScreenWidth, height: GHZScreenHeight - 64), collectionViewLayout: flowLayout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = GHZGlobalBackgroundColor
         collectionView.register(GHZHomeHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView")
         collectionView.register(GHZHomeFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "FooterView")
         collectionView.register(GHZHomeCollectionViewCell.self, forCellWithReuseIdentifier: "GHZHomeCollectionViewCell")
-        
+        view.addSubview(self.collectionView)
         let refreshHeadView = GHZRefreshHeader(refreshingTarget: self, refreshingAction: Selector(("headRefresh")))
         refreshHeadView?.gifView?.frame = CGRect(x: 0, y: 30, width: 100, height: 100)
         collectionView.mj_header = refreshHeadView
@@ -101,8 +103,8 @@ class GHZHomePageController: GHZAnimationViewController
         var freshHotLoadFinish = false
         
         weak var weakSelf = self
-        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now), Int64(0.8 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, DispatchQueue.main()) { () -> Void in
+        let time = DispatchTime.now() + Double(Int64(0.4 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.after(when: time) { 
             GHZHeaderData.loadHomeHeadData { (data, error) -> Void in
                 if error == nil {
                     headDataLoadFinish = true
@@ -115,14 +117,14 @@ class GHZHomePageController: GHZAnimationViewController
                 }
             }
             
-            GHZHomePageFreshHot.loadFreshHotData { (data, error) -> Void in
+            GHZHomePageFreshHot.loadHomePageFreshHotData(completion: { (data, error) in
                 freshHotLoadFinish = true
                 weakSelf?.freshHotData = data
                 if headDataLoadFinish && freshHotLoadFinish {
                     weakSelf?.collectionView.reloadData()
                     weakSelf?.collectionView.mj_header.endRefreshing()
                 }
-            }
+            })
         }
 
     }
@@ -156,9 +158,7 @@ class GHZHomePageController: GHZAnimationViewController
     //商品数量发生改变
     func GHZShopCartProductNumberDidChange() {
         collectionView.reloadData()
-    }
-    //TODO: 刷新没写
-    
+    }    
 }
 
 extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -193,7 +193,7 @@ extension GHZHomePageController: UICollectionViewDelegate,UICollectionViewDataSo
             cell.shops = freshHotData!.data![indexPath.row]
             weak var weakSelf = self
             cell.addButtonClick = ({ (imageView) -> () in
-                weakSelf?.addProductsToBigShopCarAnimation(imageView: imageView)
+                weakSelf?.addProductsAnimation(imageView)
             })
         }
         return cell
