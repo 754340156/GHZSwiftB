@@ -15,12 +15,15 @@ class GHZHeaderData: NSObject {
     
     class func loadHomeHeadData(completion:(data: GHZHeaderData?, error: NSError?) -> Void) {
         let path = Bundle.main().pathForResource("首页焦点按钮", ofType: nil)
-        let data = NSData(contentsOfFile: path!)
-        if data != nil {
-             let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.allowFragments)) as! NSDictionary
+        let cudata = NSData(contentsOfFile: path!)
+        if cudata != nil {
+             let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: cudata! as Data, options: JSONSerialization.ReadingOptions.allowFragments)) as! NSDictionary
+            print(dict)
             let modelTool = GHZ_Extension.sharedManager
-            let data = modelTool.objectWithDictionary(dict: dict, cls: GHZHeaderData.self) as? GHZHeaderData
-            completion(data: data, error: nil)
+            
+//            let data = modelTool.objectWithDictionary(dict: dict, cls: GHZHeaderData.self) as? GHZHeaderData
+            let data = GHZHeaderData.mj_setKeyValues(dict)!
+            completion(data: , error: nil)
         }
     }
     

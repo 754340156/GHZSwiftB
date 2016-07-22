@@ -5,6 +5,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <MJRefresh/MJRefresh.h>
+#import <MJExtension/MJExtension.h>
 #import "UMSocial.h"
 #import <CoreLocation/CoreLocation.h>
 #import "UMSocialSinaSSOHandler.h"

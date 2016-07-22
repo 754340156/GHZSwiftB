@@ -9,4 +9,5 @@ pod 'MJRefresh'
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'Masonry'
+pod 'MJExtension'
 end

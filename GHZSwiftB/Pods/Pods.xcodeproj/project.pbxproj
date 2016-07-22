@@ -1332,37 +1332,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					1C3436CEA5C3D39764C5F54374794ECB = {
-						ProvisioningStyle = Manual;
-					};
-					1D06C25FA23485D29301DCA3A9BA59EC = {
-						ProvisioningStyle = Manual;
-					};
-					29DD99664D189A7CA206368F493B1E0B = {
-						ProvisioningStyle = Manual;
-					};
-					54467D265FD40DFD6F63E8EB0C2D0332 = {
-						ProvisioningStyle = Manual;
-					};
-					7C0126D717EB28DC6DB2EEA2E20B5172 = {
-						DevelopmentTeam = 4M826C7G72;
-						DevelopmentTeamName = "哲 赵 (Personal Team)";
-						ProvisioningStyle = Manual;
-					};
-					A9A83F63385AA43314397B8DD375464B = {
-						DevelopmentTeam = 4M826C7G72;
-						DevelopmentTeamName = "哲 赵 (Personal Team)";
-					};
-					BCDF1AEAB28D94F443C015635261550A = {
-						ProvisioningStyle = Manual;
-					};
-					E61CE3B6DFA1FE6B3E296965C76C0E10 = {
-						DevelopmentTeam = 4M826C7G72;
-						DevelopmentTeamName = "哲 赵 (Personal Team)";
-						ProvisioningStyle = Manual;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1614,7 +1583,6 @@
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SVProgressHUD;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1644,7 +1612,6 @@
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MBProgressHUD;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1674,7 +1641,6 @@
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = AFNetworking;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1704,7 +1670,6 @@
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SDWebImage;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1738,7 +1703,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_GHZSwiftB;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1772,7 +1736,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_GHZSwiftB;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1902,7 +1865,6 @@
 				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MJExtension;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1932,7 +1894,6 @@
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MBProgressHUD;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2000,7 +1961,6 @@
 				MODULEMAP_FILE = "Target Support Files/AFNetworking/AFNetworking.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = AFNetworking;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2030,7 +1990,6 @@
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SDWebImage;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2060,7 +2019,6 @@
 				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MJRefresh;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2090,7 +2048,6 @@
 				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SVProgressHUD;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2120,7 +2077,6 @@
 				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MJExtension;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2150,7 +2106,6 @@
 				MODULEMAP_FILE = "Target Support Files/MJRefresh/MJRefresh.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MJRefresh;
-				PROVISIONING_PROFILE_SPECIFIER = 4M826C7G72/;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

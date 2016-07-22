@@ -27,7 +27,7 @@ class GHZHomePageController: GHZAnimationViewController
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = GHZNavBarWhiteBackColor
+        navigationController?.navigationBar.barTintColor = GHZNavigationYellowColor
         if collectionView != nil {
             collectionView.reloadData()
         }
@@ -57,7 +57,27 @@ class GHZHomePageController: GHZAnimationViewController
         collectionView.mj_header = refreshHeadView
     }
     func setHeaderView()  {
-        weak var weakSelf = self
+         weak var weakSelf = self
+        //处理数据
+        GHZHeaderData.loadHomeHeadData { (data, error) in
+
+            print(Thread.current())
+            if error != nil{
+                weakSelf?.headerView.headerData = data!
+                weakSelf?.headData = data
+                weakSelf?.collectionView.reloadData()
+            }
+        }
+        //处理数据
+        GHZHomePageFreshHot.loadHomePageFreshHotData { (data, error) in
+            if error != nil
+            {
+                weakSelf?.freshHotData = data
+                weakSelf?.collectionView.reloadData()
+                weakSelf?.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
+            }
+        }
+       
         headerView = GHZHomeHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), clickHotView: { (index, headerView) in
             if weakSelf?.headData?.data?.icons?.count > 0
             {
@@ -76,23 +96,9 @@ class GHZHomePageController: GHZAnimationViewController
                 
         })
         
-        //处理数据
-        GHZHeaderData.loadHomeHeadData { (data, error) in
-            if error != nil{
-                self.headerView.headerData = data!
-                self.headData = data
-                self.collectionView.reloadData()
-            }
-        }
-        //处理数据
-        GHZHomePageFreshHot.loadHomePageFreshHotData { (data, error) in
-            if error != nil
-            {
-                weakSelf?.freshHotData = data
-                weakSelf?.collectionView.reloadData()
-                weakSelf?.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
-            }
-        }
+        collectionView.addSubview(headerView)
+        
+ 
     }
     //刷新
     private func headRefresh() {
